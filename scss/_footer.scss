@@ -5,13 +5,27 @@
     min-height: 10vh;
     background-color: #0D0221;
     margin-top: 50px;
+    grid-template-columns: 1fr 1fr;
     >.arthas_bot_footer{
         display: grid;
         align-items: center;
         justify-items: start;
+        grid-template-rows: 6vh 6vh 6vh;
 
         >h4{
             font-size: 1em;
+            color: #A6CFD5;
+        }
+        >a{
+           
+            text-decoration: none;
+            color: #0D0221;
+            background-color: #A6CFD5;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        >p{
             color: #A6CFD5;
         }
     }
@@ -20,6 +34,7 @@
         display: grid;
         align-items: center;
         justify-items: start;
+        grid-template-rows: 6vh 6vh;
 
         >h4{
 
@@ -28,8 +43,65 @@
         }
         >p{
             font-size: 1em;
-            color:#A6CFD5
+            color: #0D0221;
+            background-color: #A6CFD5;
+            padding: 5px;
+            border-radius: 5px;
         }
         
+    }
+}
+
+
+@media only screen and (min-width: 770px){
+    #page_footer{
+
+        >.arthas_bot_footer{
+
+    
+            >h4{
+
+            }
+        }
+    
+        >.suggestions_tab{
+
+    
+            >h4{
+    
+
+            }
+            >p{
+
+            }
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px){
+
+    #page_footer{
+
+        >.arthas_bot_footer{
+
+    
+            >h4{
+
+            }
+        }
+    
+        >.suggestions_tab{
+
+    
+            >h4{
+    
+
+            }
+            >p{
+
+            }
+            
+        }
     }
 }

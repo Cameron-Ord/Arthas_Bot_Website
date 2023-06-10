@@ -5,20 +5,33 @@
   min-height: 10vh;
   background-color: #0D0221;
   margin-top: 50px;
+  grid-template-columns: 1fr 1fr;
 }
 #page_footer > .arthas_bot_footer {
   display: grid;
   align-items: center;
   justify-items: start;
+  grid-template-rows: 6vh 6vh 6vh;
 }
 #page_footer > .arthas_bot_footer > h4 {
   font-size: 1em;
+  color: #A6CFD5;
+}
+#page_footer > .arthas_bot_footer > a {
+  text-decoration: none;
+  color: #0D0221;
+  background-color: #A6CFD5;
+  padding: 5px;
+  border-radius: 5px;
+}
+#page_footer > .arthas_bot_footer > p {
   color: #A6CFD5;
 }
 #page_footer > .suggestions_tab {
   display: grid;
   align-items: center;
   justify-items: start;
+  grid-template-rows: 6vh 6vh;
 }
 #page_footer > .suggestions_tab > h4 {
   font-size: 1em;
@@ -26,51 +39,130 @@
 }
 #page_footer > .suggestions_tab > p {
   font-size: 1em;
-  color: #A6CFD5;
+  color: #0D0221;
+  background-color: #A6CFD5;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 #page_header {
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   min-height: 10vh;
   background-color: #0D0221;
   width: 100%;
   margin-bottom: 25px;
 }
-#page_header > .nav_bar {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-}
-#page_header > .nav_bar > a {
-  width: 75%;
-  color: #A6CFD5;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9em;
-}
-#page_header > .doc_text {
+#page_header > #container {
   display: grid;
   justify-items: center;
   align-items: center;
   grid-template-columns: 1fr 1fr;
+  height: 100%;
 }
-#page_header > .doc_text > img {
+#page_header > #container > .nav_bar {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: start;
+  height: 100%;
+}
+#page_header > #container > .nav_bar > a {
+  color: #0D0221;
+  background-color: #A6CFD5;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1em;
+}
+#page_header > #container > .doc_text {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: start;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+#page_header > #container > .doc_text > div {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: start;
+}
+#page_header > #container > .doc_text > div > img {
   width: 50px;
-  height: 50px;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
   border-width: 5.5px;
   border-style: solid;
   color: #A6CFD5;
 }
-#page_header > .doc_text > h2 {
-  font-size: 0.9em;
+#page_header > #container > .doc_text > h2 > a {
+  font-size: 1em;
+  font-weight: 800;
   color: #A6CFD5;
+  text-decoration: none;
 }
 
+@media only screen and (min-width: 770px) {
+  #page_header {
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    width: 100%;
+  }
+  #page_header > #container {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  #page_header > #container > .nav_bar {
+    width: 100%;
+    text-align: start;
+  }
+  #page_header > #container > .nav_bar > a {
+    font-size: 1.2em;
+  }
+  #page_header > #container > .doc_text {
+    width: 100%;
+    grid-template-columns: 20vw 20vw;
+  }
+  #page_header > #container > .doc_text > div > img {
+    width: 75px;
+  }
+  #page_header > #container > .doc_text > h2 {
+    font-size: 1.6em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  #page_header {
+    grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
+    width: 100%;
+  }
+  #page_header > #container {
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
+  }
+  #page_header > #container > .nav_bar {
+    width: 100%;
+    text-align: start;
+  }
+  #page_header > #container > .nav_bar > a {
+    font-size: 1.4em;
+  }
+  #page_header > #container > .doc_text {
+    width: 100%;
+    grid-template-columns: 10vw 10vw;
+  }
+  #page_header > #container > .doc_text > div > img {
+    width: 75px;
+  }
+  #page_header > #container > .doc_text > h2 {
+    font-size: 1.8em;
+  }
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -86,6 +178,7 @@ body {
   align-items: center;
   min-height: 80vh;
   width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 #page_main > #section_main {
   display: grid;
@@ -148,6 +241,10 @@ body {
   color: #A6CFD5;
   border-radius: 10px;
 }
+#page_main > #section_main > #main_article > span > div > h3 {
+  color: #0D0221;
+  font-size: 1.2em;
+}
 #page_main > #section_main > #main_article > span > h1 {
   font-size: 2em;
   color: #0D0221;
@@ -156,6 +253,68 @@ body {
   height: auto;
   width: 90%;
   border-radius: 10px;
+}
+
+@media only screen and (min-width: 770px) {
+  #page_main {
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  }
+  #page_main > #section_main {
+    grid-template-columns: 1fr 1fr;
+  }
+  #page_main > #section_main > #commands_article > span h1 {
+    font-size: 1.8em;
+  }
+  #page_main > #section_main > #commands_article > span > div > p {
+    font-size: 1.3em;
+    width: 80px;
+    margin-top: 25px;
+  }
+  #page_main > #section_main > #main_article > span {
+    grid-template-rows: 10vh 1fr 1fr;
+  }
+  #page_main > #section_main > #main_article > span > div > p {
+    width: 75%;
+    font-size: 1.3em;
+  }
+  #page_main > #section_main > #main_article > span > div > h3 {
+    font-size: 1.8em;
+  }
+  #page_main > #section_main > #main_article > span > h1 {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  #page_main {
+    grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
+  }
+  #page_main > #section_main > #commands_article > span {
+    grid-template-rows: 10vh 1fr;
+  }
+  #page_main > #section_main > #commands_article > span h1 {
+    font-size: 1.8em;
+  }
+  #page_main > #section_main > #commands_article > span > div {
+    grid-template-columns: 20vw 20vw;
+  }
+  #page_main > #section_main > #commands_article > span > div > p {
+    font-size: 1.3em;
+    width: 80px;
+    margin-top: 25px;
+  }
+  #page_main > #section_main > #main_article > span {
+    grid-template-rows: 10vh 1fr 1fr;
+  }
+  #page_main > #section_main > #main_article > span > div > p {
+    width: 75%;
+    font-size: 1.5em;
+  }
+  #page_main > #section_main > #main_article > span > div > h3 {
+    font-size: 2em;
+  }
+  #page_main > #section_main > #main_article > span > h1 {
+    font-size: 3.2em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
