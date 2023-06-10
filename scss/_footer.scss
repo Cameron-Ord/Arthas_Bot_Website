@@ -1,0 +1,35 @@
+#page_footer{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    min-height: 10vh;
+    background-color: #0D0221;
+    margin-top: 50px;
+    >.arthas_bot_footer{
+        display: grid;
+        align-items: center;
+        justify-items: start;
+
+        >h4{
+            font-size: 1em;
+            color: #A6CFD5;
+        }
+    }
+
+    >.suggestions_tab{
+        display: grid;
+        align-items: center;
+        justify-items: start;
+
+        >h4{
+
+            font-size: 1em;
+            color: #A6CFD5;
+        }
+        >p{
+            font-size: 1em;
+            color:#A6CFD5
+        }
+        
+    }
+}

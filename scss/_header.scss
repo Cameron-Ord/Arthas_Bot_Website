@@ -1,0 +1,56 @@
+#page_header{
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    min-height: 10vh;
+    background-color: #0D0221;
+    width: 100%;
+    margin-bottom: 25px;
+
+    >.nav_bar{
+
+        display: grid;
+        justify-items: center;
+        align-items: center;
+
+        >a{
+            width: 75%;
+            color: #A6CFD5;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9em;
+
+        }
+
+    }
+
+    >.doc_text{
+
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+
+        >img{
+
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border-width: 5.5px;
+            border-style: solid;
+            color: #A6CFD5;
+        }
+
+        >h2{
+            font-size: 0.9em;
+
+            color: #A6CFD5;
+
+        }
+
+
+    }
+}
