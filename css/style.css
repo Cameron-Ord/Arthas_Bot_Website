@@ -2,7 +2,7 @@
   display: grid;
   align-items: center;
   justify-items: center;
-  min-height: 10vh;
+  min-height: 15vh;
   background-color: #0D0221;
   margin-top: 50px;
   grid-template-columns: 1fr 1fr;
@@ -10,11 +10,12 @@
 #page_footer > .arthas_bot_footer {
   display: grid;
   align-items: center;
-  justify-items: start;
-  grid-template-rows: 6vh 6vh 6vh;
+  justify-items: center;
+  text-align: center;
+  grid-template-rows: 8vh 8vh 8vh;
 }
 #page_footer > .arthas_bot_footer > h4 {
-  font-size: 1em;
+  font-size: 0.75em;
   color: #A6CFD5;
 }
 #page_footer > .arthas_bot_footer > a {
@@ -23,28 +24,66 @@
   background-color: #A6CFD5;
   padding: 5px;
   border-radius: 5px;
+  font-size: 0.75em;
 }
 #page_footer > .arthas_bot_footer > p {
+  font-size: 0.75em;
   color: #A6CFD5;
 }
 #page_footer > .suggestions_tab {
   display: grid;
   align-items: center;
   justify-items: start;
-  grid-template-rows: 6vh 6vh;
+  justify-items: center;
+  text-align: center;
+  grid-template-rows: 8vh 8vh;
 }
 #page_footer > .suggestions_tab > h4 {
-  font-size: 1em;
+  font-size: 0.75em;
   color: #A6CFD5;
 }
 #page_footer > .suggestions_tab > p {
-  font-size: 1em;
+  font-size: 0.75em;
   color: #0D0221;
   background-color: #A6CFD5;
   padding: 5px;
   border-radius: 5px;
 }
 
+@media only screen and (min-width: 770px) {
+  #page_footer > .arthas_bot_footer > h4 {
+    font-size: 1em;
+  }
+  #page_footer > .arthas_bot_footer > a {
+    font-size: 1em;
+  }
+  #page_footer > .arthas_bot_footer > p {
+    font-size: 1em;
+  }
+  #page_footer > .suggestions_tab > h4 {
+    font-size: 1em;
+  }
+  #page_footer > .suggestions_tab > p {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  #page_footer > .arthas_bot_footer > h4 {
+    font-size: 1.3em;
+  }
+  #page_footer > .arthas_bot_footer > p {
+    font-size: 1.3em;
+  }
+  #page_footer > .arthas_bot_footer > a {
+    font-size: 1.3em;
+  }
+  #page_footer > .suggestions_tab > h4 {
+    font-size: 1.3em;
+  }
+  #page_footer > .suggestions_tab > p {
+    font-size: 1.3em;
+  }
+}
 #page_header {
   display: grid;
   justify-items: center;
@@ -59,7 +98,7 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50vw 50vw;
   height: 100%;
 }
 #page_header > #container > .nav_bar {
@@ -76,7 +115,7 @@
   border-radius: 5px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 0.7em;
 }
 #page_header > #container > .doc_text {
   display: grid;
@@ -103,7 +142,7 @@
   color: #A6CFD5;
 }
 #page_header > #container > .doc_text > h2 > a {
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 800;
   color: #A6CFD5;
   text-decoration: none;
@@ -133,7 +172,7 @@
     width: 75px;
   }
   #page_header > #container > .doc_text > h2 {
-    font-size: 1.6em;
+    font-size: 2em;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -142,7 +181,7 @@
     width: 100%;
   }
   #page_header > #container {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     width: 100%;
   }
   #page_header > #container > .nav_bar {
@@ -154,13 +193,13 @@
   }
   #page_header > #container > .doc_text {
     width: 100%;
-    grid-template-columns: 10vw 10vw;
+    grid-template-columns: 10vw 15vw;
   }
   #page_header > #container > .doc_text > div > img {
     width: 75px;
   }
   #page_header > #container > .doc_text > h2 {
-    font-size: 1.8em;
+    font-size: 2.5em;
   }
 }
 * {
@@ -259,9 +298,6 @@ body {
   #page_main {
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
   }
-  #page_main > #section_main {
-    grid-template-columns: 1fr 1fr;
-  }
   #page_main > #section_main > #commands_article > span h1 {
     font-size: 1.8em;
   }
@@ -287,6 +323,9 @@ body {
 @media only screen and (min-width: 1025px) {
   #page_main {
     grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
+  }
+  #page_main > #section_main {
+    grid-template-columns: 1fr 1fr;
   }
   #page_main > #section_main > #commands_article > span {
     grid-template-rows: 10vh 1fr;

@@ -129,7 +129,7 @@ body{
         grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
         >#section_main{
 
-            grid-template-columns: 1fr 1fr;
+           
     
             >#commands_article{
 
@@ -203,7 +203,7 @@ body{
     #page_main{
         grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
         >#section_main{
-
+            grid-template-columns: 1fr 1fr;
     
             >#commands_article{
 
